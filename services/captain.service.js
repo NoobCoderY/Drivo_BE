@@ -36,7 +36,6 @@ module.exports.getTodayFare = async (captainId) => {
         const endOfDay = new Date();
         endOfDay.setHours(23, 59, 59, 999); 
 
-        console.log(startOfDay, endOfDay);
         
 
         const rides = await Ride.find({
@@ -48,9 +47,7 @@ module.exports.getTodayFare = async (captainId) => {
             },
         });
 
-        console.log(rides,"completed rides");
         
-       
         const totalFare = rides.reduce((sum, ride) => sum + ride.fare, 0);
 
         return totalFare;
