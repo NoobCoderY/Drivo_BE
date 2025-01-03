@@ -13,7 +13,7 @@ const rideRoutes = require('./routes/ride.routes');
 connectToDb();
 
 app.use(cors({
-    origin: ['http://localhost:5174', 'http://localhost:5173','https://rg7cjw6w-5173.inc1.devtunnels.ms'],
+    origin: [ 'http://localhost:5173', 'https://drivo-fe.vercel.app/'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
